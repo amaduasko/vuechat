@@ -55,7 +55,7 @@ export default {
             name, msg
           })
           .then(response => this.chats = [...this.chats, newChat])
-          .catch(error => console.log(error))
+          .catch(error => console.log('an error have been occured'))
         } else{ document.querySelector('.msg').classList.add('input-error') }
       } else{ document.querySelector('.usrnm').classList.add('input-error') }
     }
@@ -64,13 +64,12 @@ export default {
     axios.get("http://localhost:80/msg")
       .then(response => {
         for (let i = 0; i < response.data.name.length; i++){
-        console.log(response.data.name)
         this.chats.push({
           name:response.data.name[i],
           msg:response.data.msg[i]
         })
       }})
-      .catch(error => console.log(error))
+      .catch(error => console.log('an error have been occured'))
   }
 }
 </script>
