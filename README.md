@@ -1,4 +1,4 @@
-# todo
+# vuechat
 
 ## Project setup
 ```
