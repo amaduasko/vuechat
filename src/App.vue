@@ -51,7 +51,7 @@ export default {
       if(name !== ""){
         document.querySelector('.msg').classList.remove('input-error')
         if(msg !== ""){
-          axios.post("http://localhost:80/new-msg",{
+          axios.post("https://vuechatap.herokuapp.com/new-msg",{
             name, msg
           })
           .then(response => this.chats = [...this.chats, newChat])
@@ -61,7 +61,7 @@ export default {
     }
   },
   created() {
-    axios.get("http://localhost:80/msg")
+    axios.get("https://vuechatap.herokuapp.com/msg")
       .then(response => {
         for (let i = 0; i < response.data.name.length; i++){
         this.chats.push({

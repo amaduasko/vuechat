@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 const chatDb = require('knex')({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'postgresql-regular-99490',
       user : 'postgres',
       password : 'root',
       database : 'vue-chat'
